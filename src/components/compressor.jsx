@@ -8,6 +8,7 @@ const Compressor = () => {
   const [isCompressing, setIsCompressing] = useState(false);
   const [error, setError] = useState("");
   const [maxSizeMB, setMaxSizeMB] = useState(1);
+  const [qualityMode, setQualityMode] = useState('max'); // 'max' or 'small'
   const [progress, setProgress] = useState(0);
   const [previewUrl, setPreviewUrl] = useState(null);
   const [compressedUrl, setCompressedUrl] = useState(null);
@@ -71,8 +72,10 @@ const Compressor = () => {
 
     const options = {
       maxSizeMB: maxSizeMB,
-      maxWidthOrHeight: 1920,
+      maxWidthOrHeight: qualityMode === 'max' ? 4096 : 1920,
       useWebWorker: true,
+      initialQuality: qualityMode === 'max' ? 1.0 : 0.7,
+      preserveExif: qualityMode === 'max',
       onProgress: (p) => setProgress(p),
     };
 
@@ -160,6 +163,29 @@ const Compressor = () => {
               </div>
             )}
 
+            <div className="mode-section">
+              <div className="slider-label" style={{ marginBottom: '10px' }}>Compression Mode</div>
+              <div className="mode-toggle">
+                <button
+                  className={`mode-btn ${qualityMode === 'max' ? 'active' : ''}`}
+                  onClick={() => setQualityMode('max')}
+                >
+                  🔒 Maximum Quality
+                </button>
+                <button
+                  className={`mode-btn ${qualityMode === 'small' ? 'active' : ''}`}
+                  onClick={() => setQualityMode('small')}
+                >
+                  📦 Smaller Size
+                </button>
+              </div>
+              <div className="mode-desc">
+                {qualityMode === 'max'
+                  ? 'Preserves original quality. Reduces size through smart optimization without visible quality loss.'
+                  : 'Aggressively reduces file size. Some quality loss may be noticeable.'}
+              </div>
+            </div>
+
             <div className="slider-section">
               <div className="slider-header">
                 <label htmlFor="quality-slider" className="slider-label">Max File Size</label>
@@ -169,7 +195,7 @@ const Compressor = () => {
                 id="quality-slider"
                 type="range"
                 min="0.1"
-                max="5"
+                max="10"
                 step="0.1"
                 value={maxSizeMB}
                 onChange={(e) => setMaxSizeMB(parseFloat(e.target.value))}
