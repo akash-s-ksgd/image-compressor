@@ -106,7 +106,7 @@ function App() {
       </button>
 
       <header className="app-header">
-        <h1>⚡ Lightning Fast Image Compressor</h1>
+        <h1>⚡ Fast Image Compressor</h1>
         <p className="subtitle">
           Compress JPEG, PNG &amp; WebP images for free — directly in your browser. 100% private, no uploads.
         </p>
@@ -134,7 +134,7 @@ function App() {
         <div className="footer-content">
           <p className="footer-privacy">🔒 Your images never leave your device. All processing happens locally in your browser.</p>
           <div className="footer-links">
-            <span>© {new Date().getFullYear()} Lightning Compressor</span>
+            <span>© {new Date().getFullYear()} Fast Image Compressor</span>
             <span className="footer-dot">·</span>
             <span>Free to use</span>
             <span className="footer-dot">·</span>
