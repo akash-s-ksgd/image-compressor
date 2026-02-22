@@ -262,7 +262,7 @@ const Compressor = () => {
           <ins
             className="adsbygoogle"
             style={{ display: 'block' }}
-            data-ad-client="ca-pub-XXXXXXXXXX"
+            data-ad-client="ca-pub-1507750871956391"
             data-ad-slot="XXXXXXXXXX"
             data-ad-format="fluid"
             data-ad-layout-key="-6t+ed+2i-1n-4w"
