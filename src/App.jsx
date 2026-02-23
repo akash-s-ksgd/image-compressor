@@ -128,6 +128,97 @@ function App() {
         <section aria-label="Image compression tool">
           <Compressor />
         </section>
+
+        {/* ===== HOW IT WORKS ===== */}
+        <section className="content-section" aria-label="How it works">
+          <h2 className="section-title">How It Works</h2>
+          <div className="how-steps">
+            <div className="how-step">
+              <div className="how-step-icon">📂</div>
+              <h3>1. Upload Your Image</h3>
+              <p>Drag and drop or click to select JPEG, PNG, or WebP images directly from your device. No file size limit.</p>
+            </div>
+            <div className="how-step">
+              <div className="how-step-icon">⚙️</div>
+              <h3>2. Set Quality</h3>
+              <p>Use the quality slider to balance file size vs. visual quality. Choose auto mode for instant results or manual for full control.</p>
+            </div>
+            <div className="how-step">
+              <div className="how-step-icon">⬇️</div>
+              <h3>3. Download</h3>
+              <p>Preview before and after, then download your compressed image. Repeat for as many images as you need — it's always free.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* ===== FEATURES ===== */}
+        <section className="content-section" aria-label="Features">
+          <h2 className="section-title">Why Use Fast Image Compressor?</h2>
+          <div className="features-grid">
+            <article className="feature-card">
+              <div className="feature-icon">🔒</div>
+              <h3>100% Private</h3>
+              <p>Your images never leave your device. All compression is done locally in your browser — no server, no cloud, no data collection.</p>
+            </article>
+            <article className="feature-card">
+              <div className="feature-icon">⚡</div>
+              <h3>Instant Results</h3>
+              <p>Compress in seconds. No waiting for uploads or server processing. Works entirely offline once the page loads.</p>
+            </article>
+            <article className="feature-card">
+              <div className="feature-icon">🖼️</div>
+              <h3>Multiple Formats</h3>
+              <p>Supports JPEG, PNG, and WebP. Compress photos, screenshots, product images, and more with a single tool.</p>
+            </article>
+            <article className="feature-card">
+              <div className="feature-icon">🎚️</div>
+              <h3>Quality Control</h3>
+              <p>Manual quality slider lets you choose your target file size precisely. See before/after previews before downloading.</p>
+            </article>
+            <article className="feature-card">
+              <div className="feature-icon">📋</div>
+              <h3>Compression History</h3>
+              <p>All your compressed files stay available in session history so you can re-download any previous result without reprocessing.</p>
+            </article>
+            <article className="feature-card">
+              <div className="feature-icon">💸</div>
+              <h3>Completely Free</h3>
+              <p>No sign-up. No subscription. No hidden limits. Use it as many times as you need, for personal or commercial projects.</p>
+            </article>
+          </div>
+        </section>
+
+        {/* ===== FAQ ===== */}
+        <section className="content-section" aria-label="Frequently asked questions">
+          <h2 className="section-title">Frequently Asked Questions</h2>
+          <div className="faq-list">
+            <details className="faq-item">
+              <summary className="faq-question">Does compressing an image reduce its quality?</summary>
+              <p className="faq-answer">Lossy compression (JPEG, WebP) reduces quality slightly to achieve smaller file sizes. Using the quality slider at 70–85% typically reduces file size by 60–80% with no visible quality difference to the human eye. PNG compression is lossless by nature.</p>
+            </details>
+            <details className="faq-item">
+              <summary className="faq-question">Are my images uploaded to any server?</summary>
+              <p className="faq-answer">No. All compression happens directly in your browser using the Web APIs. Your images never leave your device and are never sent to any server. This makes Fast Image Compressor completely private and safe for sensitive images.</p>
+            </details>
+            <details className="faq-item">
+              <summary className="faq-question">What image formats are supported?</summary>
+              <p className="faq-answer">We support JPEG (.jpg, .jpeg), PNG (.png), and WebP (.webp). These cover the vast majority of images used on websites, apps, and social media.</p>
+            </details>
+            <details className="faq-item">
+              <summary className="faq-question">How much can I reduce an image's file size?</summary>
+              <p className="faq-answer">Typically 50–80% reduction is achievable for JPEG and WebP images. PNG files vary more depending on content. Use the manual mode to set a specific target size in megabytes.</p>
+            </details>
+            <details className="faq-item">
+              <summary className="faq-question">Is there a file size limit?</summary>
+              <p className="faq-answer">No. There is no file size limit since processing happens locally on your device. Large files may take a few extra seconds to process depending on your device's performance.</p>
+            </details>
+            <details className="faq-item">
+              <summary className="faq-question">Can I compress multiple images at once?</summary>
+              <p className="faq-answer">Currently you can compress images one at a time, but each compressed output is saved in the history panel so you can work through multiple images quickly and download them all.</p>
+            </details>
+          </div>
+        </section>
+
       </main>
 
       <footer className="app-footer">
