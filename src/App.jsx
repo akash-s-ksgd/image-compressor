@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import Compressor from './components/compressor';
 import './App.css';
 
@@ -219,6 +220,73 @@ function App() {
           </div>
         </section>
 
+        {/* ===== ARTICLE: WHY IMAGE COMPRESSION MATTERS ===== */}
+        <section className="content-section article-section" aria-label="Article about image compression">
+          <h2 className="section-title">Why Image Compression Matters for Your Website</h2>
+          <p className="article-body">
+            Images are the single largest contributor to page weight on the modern web. According
+            to HTTP Archive data, images account for over <strong>50% of the total bytes</strong> loaded
+            by the average webpage. This has a direct and measurable impact on your site's loading
+            speed, user experience, and search engine ranking.
+          </p>
+
+          <h3 className="article-subheading">The Impact on Core Web Vitals</h3>
+          <p className="article-body">
+            Google's Core Web Vitals — particularly <strong>Largest Contentful Paint (LCP)</strong> — are
+            heavily affected by how quickly your hero images and above-the-fold content load. A large,
+            unoptimised JPEG hero image can easily push your LCP beyond the 2.5-second threshold,
+            which Google considers "poor". Compressing that same image to under 200 KB can bring
+            LCP down to under 1 second, dramatically improving both your ranking and user retention.
+          </p>
+
+          <h3 className="article-subheading">Lossy vs. Lossless Compression: What's the Difference?</h3>
+          <p className="article-body">
+            <strong>Lossless compression</strong> reduces file size without discarding any image data. The
+            decoded image is bit-for-bit identical to the original. PNG compression is always lossless.
+            This is ideal for logos, icons, and screenshots where every pixel must be preserved.
+          </p>
+          <p className="article-body">
+            <strong>Lossy compression</strong>, used by JPEG and WebP, permanently removes some image data
+            — specifically the subtle colour variations that the human eye has difficulty perceiving.
+            At a quality setting of 75–85%, files can be reduced by 60–80% with no visible quality
+            difference in most photographs. Fast Image Compressor lets you choose your target file
+            size and mode so you can find the right balance for your use case.
+          </p>
+
+          <h3 className="article-subheading">WebP: The Modern Format for Web Images</h3>
+          <p className="article-body">
+            WebP is an image format developed by Google that provides superior compression for both
+            lossy and lossless images on the web. WebP lossy images are typically <strong>25–34% smaller</strong>
+            than comparable JPEG images at equivalent visual quality. All modern browsers (Chrome,
+            Firefox, Safari, Edge) now support WebP natively, making it an excellent choice for web
+            delivery. This tool supports compressing WebP images directly.
+          </p>
+
+          <h3 className="article-subheading">Privacy-First Compression: How Browser-Side Processing Works</h3>
+          <p className="article-body">
+            Traditional online image compressors require you to upload your photos to their servers,
+            where they are processed, temporarily stored, and then returned to you for download. This
+            raises legitimate privacy concerns, especially for sensitive images such as personal
+            photos, business documents, or medical scans.
+          </p>
+          <p className="article-body">
+            Fast Image Compressor takes a fundamentally different approach. By using the browser's
+            built-in <strong>Canvas API</strong> and Web Workers, your images are compressed entirely
+            within your own device. No data is ever transmitted — your images never touch any server.
+            This makes it safe to compress any image, regardless of its sensitivity, with complete
+            confidence in your privacy.
+          </p>
+
+          <h3 className="article-subheading">Best Practices for Image Optimisation</h3>
+          <ul className="article-list">
+            <li><strong>Use the right format:</strong> JPEG for photographs, PNG for graphics with transparency, WebP for the best of both worlds on the web.</li>
+            <li><strong>Resize before compressing:</strong> If an image will be displayed at 600px wide, there's no benefit to serving it at 4000px wide. Resize dimensions first.</li>
+            <li><strong>Aim for under 200 KB</strong> for most web images. Thumbnails and icons should be under 50 KB.</li>
+            <li><strong>Use descriptive filenames:</strong> Rename images to reflect their content (e.g., <code>compressed-product-photo.jpg</code>) for SEO benefit.</li>
+            <li><strong>Consider lazy loading:</strong> Use <code>loading="lazy"</code> on <code>&lt;img&gt;</code> tags to defer off-screen images and further improve page speed.</li>
+          </ul>
+        </section>
+
       </main>
 
       <footer className="app-footer">
@@ -230,6 +298,8 @@ function App() {
             <span>Free to use</span>
             <span className="footer-dot">·</span>
             <span>No sign-up required</span>
+            <span className="footer-dot">·</span>
+            <Link to="/privacy-policy" className="footer-policy-link">Privacy Policy</Link>
           </div>
         </div>
       </footer>
