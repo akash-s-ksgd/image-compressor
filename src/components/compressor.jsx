@@ -289,9 +289,9 @@ const Compressor = () => {
             className="adsbygoogle"
             style={{ display: 'block' }}
             data-ad-client="ca-pub-1507750871956391"
-            data-ad-slot="XXXXXXXXXX"
-            data-ad-format="fluid"
-            data-ad-layout-key="-6t+ed+2i-1n-4w"
+            data-ad-slot="2191398386"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
           />
         </div>
       )}

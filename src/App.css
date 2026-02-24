@@ -205,6 +205,11 @@ body *, body *::before, body *::after {
   margin-bottom: 8px;
 }
 
+.ad-bottom {
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
 /* ===== FOOTER ===== */
 .app-footer {
   max-width: 640px;

@@ -120,7 +120,7 @@ function App() {
             className="adsbygoogle"
             style={{ display: 'block' }}
             data-ad-client="ca-pub-1507750871956391"
-            data-ad-slot="XXXXXXXXXX"
+            data-ad-slot="2894794324"
             data-ad-format="auto"
             data-full-width-responsive="true"
           />
@@ -286,6 +286,18 @@ function App() {
             <li><strong>Consider lazy loading:</strong> Use <code>loading="lazy"</code> on <code>&lt;img&gt;</code> tags to defer off-screen images and further improve page speed.</li>
           </ul>
         </section>
+
+        {/* ===== BOTTOM AD ===== */}
+        <div className="ad-container ad-bottom">
+          <ins
+            className="adsbygoogle"
+            style={{ display: 'block' }}
+            data-ad-client="ca-pub-1507750871956391"
+            data-ad-slot="7240040507"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          />
+        </div>
 
       </main>
 
